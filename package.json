@@ -1,0 +1,18 @@
+{
+  "name": "typescript-patterns",
+  "version": "1.0.0",
+  "description": "Typescript Design Patterns",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.2",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jens Bekersch",
+  "license": "ISC"
+}
