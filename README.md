@@ -12,4 +12,4 @@ im Bezug auf Ausführung und Zeitpunkt kontrolliert werden.
 + Bereitstellung von Undo/Redo
 + Parametrisierung
 
-[Quellcode:] (https://github.com/JensBekersch/TypescriptDesignPatterns/tree/master/src/BehavioralPatterns/Command%5BSimple%5D)
+[Quellcode:](https://github.com/JensBekersch/TypescriptDesignPatterns/tree/master/src/BehavioralPatterns/Command%5BSimple%5D)
