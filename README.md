@@ -11,3 +11,5 @@ im Bezug auf Ausführung und Zeitpunkt kontrolliert werden.
 + Zeitliche und/oder räumliche Entkopplung von Aufruf und Ausführung
 + Bereitstellung von Undo/Redo
 + Parametrisierung
+
+[Quellcode:] (https://github.com/JensBekersch/TypescriptDesignPatterns/tree/master/src/BehavioralPatterns/Command%5BSimple%5D)
