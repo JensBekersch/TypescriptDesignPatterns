@@ -11,7 +11,8 @@ export abstract class Command {
     public executeCommands(): void {
         this.buildCommands();
 
-        for (let cmd of this.commandQueue) {
+        let cmd;
+        for (cmd of this.commandQueue) {
             cmd.execute();
         }
     }
