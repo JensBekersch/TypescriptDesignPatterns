@@ -1,5 +1,16 @@
 # Typescript Design Patterns
 
+## Creational Design Patterns (Erzeugungsmuster)
+
+### Factory Method (Farbikmethode)
+
+*Kurzbeschreibung*: Konkrete Objekte sollen einfach erweiterbar sein. Dabei dient es zur Erzeugung
+von Objekten, deren konkrete Typen Kindklassen einer Erzeugerklasse sind. 
+
+*Anwendungsfälle:*
++ Dient der Einhaltung des Single Responsibility Prinzips. 
++ Einhaltung des Open Closed Prinzips: Offen für Erweiterungen, geschlossen für Modifikationen.
+
 ## Behavioral Patterns (Verhaltensmuster)
 
 ### Command [Simple] (Befehl, Kommando)

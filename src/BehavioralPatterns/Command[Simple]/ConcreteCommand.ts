@@ -1,7 +1,8 @@
-import {Command} from "./Command";
-import {CommandInterface} from "./CommandInterface";
 import {Receiver1} from "./Receiver1";
 import {Receiver2} from "./Receiver2";
+import {Commands} from "./Command";
+import ICommand = Commands.ICommand;
+import Command = Commands.Command;
 
 export class ConcreteCommand extends Command {
 
@@ -10,11 +11,11 @@ export class ConcreteCommand extends Command {
         this.addCommand(ConcreteCommand.createMessage2());
     }
 
-    protected static createMessage1(): CommandInterface {
+    protected static createMessage1(): ICommand {
         return new Receiver1();
     }
 
-    protected static createMessage2(): CommandInterface {
+    protected static createMessage2(): ICommand {
         return new Receiver2();
     }
 

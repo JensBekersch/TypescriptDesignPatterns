@@ -1,26 +1,32 @@
-import {CommandInterface} from "./CommandInterface";
+export namespace Commands {
 
-export abstract class Command {
-
-    protected commandQueue: CommandInterface[];
-
-    constructor() {
-        this.commandQueue = [];
+    export interface ICommand {
+        execute(): void;
     }
 
-    public executeCommands(): void {
-        this.buildCommands();
+    export abstract class Command {
 
-        let cmd;
-        for (cmd of this.commandQueue) {
-            cmd.execute();
+        protected commandQueue: ICommand[];
+
+        constructor() {
+            this.commandQueue = [];
         }
-    }
 
-    protected abstract buildCommands(): void;
+        public executeCommands(): void {
+            this.buildCommands();
 
-    protected addCommand(cmd: CommandInterface): void {
-        this.commandQueue.push(cmd);
+            let cmd;
+            for (cmd of this.commandQueue) {
+                cmd.execute();
+            }
+        }
+
+        protected abstract buildCommands(): void;
+
+        protected addCommand(cmd: ICommand): void {
+            this.commandQueue.push(cmd);
+        }
+
     }
 
 }
