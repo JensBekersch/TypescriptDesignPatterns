@@ -11,6 +11,8 @@ von Objekten, deren konkrete Typen Kindklassen einer Erzeugerklasse sind.
 + Dient der Einhaltung des Single Responsibility Prinzips. 
 + Einhaltung des Open Closed Prinzips: Offen für Erweiterungen, geschlossen für Modifikationen.
 
+[Factory Method Quellcode](https://github.com/JensBekersch/TypescriptDesignPatterns/tree/master/src/CreationalPatterns/Factory)
+
 ## Behavioral Patterns (Verhaltensmuster)
 
 ### Command [Simple] (Befehl, Kommando)
