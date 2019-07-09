@@ -7,6 +7,9 @@ import {Counter} from "./CreationalPatterns/Singleton/Counter";
 import {TestSingleton} from "./CreationalPatterns/Singleton/TestSingleton";
 import {TestLB} from "./LooseCoupling/impl/TestLB";
 import {TestLA} from "./LooseCoupling/impl/TestLA";
+import {CoffeemachineDeluxe} from "./StructuralPatterns/Decorator/Decorator/CoffeemachineDeluxe";
+import {CoffeemachineFlavorDecorator} from "./StructuralPatterns/Decorator/Decorator/CoffeemachineFlavorDecorator";
+import {CoffeemachineMelangeDecorator} from "./StructuralPatterns/Decorator/Decorator/CoffeemachineMelangeDecorator";
 
 // Factory
 console.log("Factory Method output: ");
@@ -82,6 +85,15 @@ c.dc();
 let testLooseCoupling = new TestLB(new TestLA());
 testLooseCoupling.printMessageFromA();
 
+// Decorator
+let coffeemachineDeluxe = new CoffeemachineDeluxe();
+let machineWithFlavorFeature = new CoffeemachineFlavorDecorator(coffeemachineDeluxe);
+let machineWithDeluxeFeatures = new CoffeemachineMelangeDecorator(machineWithFlavorFeature);
+
+machineWithDeluxeFeatures.turnOn();
+machineWithDeluxeFeatures.brewMelange();
+machineWithDeluxeFeatures.brewCoffeeWithFlavor();
+machineWithDeluxeFeatures.turnOff();
 
 
 
