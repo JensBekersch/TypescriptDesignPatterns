@@ -13,7 +13,7 @@ von Objekten, deren konkrete Typen Kindklassen einer Erzeugerklasse sind.
 
 [Factory Method Quellcode](https://github.com/JensBekersch/TypescriptDesignPatterns/tree/master/src/CreationalPatterns/Factory)
 
-###Singleton (Einzelstück)
+### Singleton (Einzelstück)
 
 *Kurzbeschreibung*: Stellt sicher, dass von einer Klasse nur eine Instanz existiert.
 
