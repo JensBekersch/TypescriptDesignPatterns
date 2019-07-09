@@ -1,0 +1,15 @@
+{
+  "TestC": {
+    "folder": "./Test/",
+    "implementationPath": "impl/",
+    "interface": "IDummyC",
+    "iocInterfaces": {
+      "IDummyA": {
+        "path": "./Test/"
+      },
+      "IDummyB": {
+        "path": "./Test/"
+      }
+    }
+  }
+}

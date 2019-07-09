@@ -1,8 +1,8 @@
 import {ConcreteCommand} from "./BehavioralPatterns/Command[Simple]/ConcreteCommand";
 import {BlackTeaFactory} from "./CreationalPatterns/Factory/BlackTeaFactory";
 import {WhiteTeaFactory} from "./CreationalPatterns/Factory/WhiteTeaFactory";
-import {DIContainer} from "./DependencyInjection/DIContainer/DIContainer";
-import {Register} from "./DependencyInjection/DIContainer/Register";
+import {Autowire} from "./DependencyInjection/Decorator/Autowire";
+import {Container} from "./DependencyInjection/Container/Container";
 
 
 // Factory
@@ -23,36 +23,37 @@ let cmd = new ConcreteCommand();
 cmd.executeCommands();
 
 //IoC
-interface DummyA {
+interface IDummyA {
     da(): void;
 }
 
-interface DummyB {
+interface IDummyB {
     db(): void;
 }
 
-interface DummyC {
+interface IDummyC {
     dc(): void;
 }
 
-@Register("DummyA", [])
-class TestA implements DummyA {
+@Autowire("IDummyA", [])
+class TestA implements IDummyA {
     da(): void {
         console.log("TestA was successfully instantiated!");
     }
 }
 
-@Register("DummyB", [])
-class TestB implements DummyB {
+@Autowire("IDummyB", [])
+class TestB implements IDummyB {
     db(): void {
         console.log("TestB was successfully instantiated!");
     }
 }
 
-@Register("DummyC", ["DummyA","DummyB"])
-class TestC implements DummyC {
+@Autowire("IDummyC", ["IDummyA","IDummyB"])
+class TestC implements IDummyC {
 
-    constructor(private _concreteA: DummyA, private _concreteB: DummyB) {}
+    constructor();
+    constructor(private _concreteA?: IDummyA, private _concreteB?: IDummyB) {}
 
     dc(): void {
         this._concreteA.da();
@@ -61,8 +62,11 @@ class TestC implements DummyC {
     }
 }
 
-let container = DIContainer.instance;
-let c = container.resolve<DummyC>("DummyC");
+
+
+
+let container = Container.instance;
+let c = container.resolve<IDummyC>("IDummyC");
 c.dc();
 
 

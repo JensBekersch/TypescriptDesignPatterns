@@ -26,3 +26,7 @@ im Bezug auf Ausführung und Zeitpunkt kontrolliert werden.
 + Parametrisierung
 
 [Command Pattern Quellcode](https://github.com/JensBekersch/TypescriptDesignPatterns/tree/master/src/BehavioralPatterns/Command%5BSimple%5D)
+
+## Inversion of Control and Dependency Injection 
+
+[Simpler IOC/DI Container](https://github.com/JensBekersch/TypescriptDesignPatterns/tree/master/src/BehavioralPatterns/DependencyInjection)
