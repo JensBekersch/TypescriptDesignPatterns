@@ -5,6 +5,8 @@ import {Autowire} from "./DependencyInjection/Decorator/Autowire";
 import {Container} from "./DependencyInjection/Container/Container";
 import {Counter} from "./CreationalPatterns/Singleton/Counter";
 import {TestSingleton} from "./CreationalPatterns/Singleton/TestSingleton";
+import {TestLB} from "./LooseCoupling/impl/TestLB";
+import {TestLA} from "./LooseCoupling/impl/TestLA";
 
 // Factory
 console.log("Factory Method output: ");
@@ -73,6 +75,12 @@ class TestC implements IDummyC {
 let container = Container.instance;
 let c = container.resolve<IDummyC>("IDummyC");
 c.dc();
+
+
+// Loose Coupling
+
+let testLooseCoupling = new TestLB(new TestLA());
+testLooseCoupling.printMessageFromA();
 
 
 

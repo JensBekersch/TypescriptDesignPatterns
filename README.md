@@ -42,3 +42,5 @@ im Bezug auf Ausführung und Zeitpunkt kontrolliert werden.
 ## Inversion of Control and Dependency Injection 
 
 [Simpler IOC/DI Container mit Decorator](https://github.com/JensBekersch/TypescriptDesignPatterns/tree/master/src/DependencyInjection)
+
+## Loose Coupling
