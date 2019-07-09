@@ -60,6 +60,8 @@ Experimental Decorators
     "experimentalDecorators": true,
     "esModuleInterop": true,
     (...)
+    
+[Annotated Decorator Quellcode](https://github.com/JensBekersch/TypescriptDesignPatterns/tree/master/src/StructuralPatterns/Decorator/AnnotatedDecorators)    
 
 
 ## Inversion of Control and Dependency Injection 
