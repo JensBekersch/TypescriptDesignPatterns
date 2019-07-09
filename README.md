@@ -50,6 +50,7 @@ im Bezug auf Ausführung und Zeitpunkt kontrolliert werden.
 + Wenn zur Laufzeit Methoden eingesetzt werden sollen und nicht zur Kompilierzeit
 + Wenn einem Objekt verschiedene Dekorierer hinzugefügt werden sollen 
 
+[Decorator Quellcode](https://github.com/JensBekersch/TypescriptDesignPatterns/tree/master/src/StructuralPatterns/Decorator/Decorator)
 
 ## Inversion of Control and Dependency Injection 
 
