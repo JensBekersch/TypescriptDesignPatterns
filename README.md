@@ -23,6 +23,7 @@ von Objekten, deren konkrete Typen Kindklassen einer Erzeugerklasse sind.
 + Bereitstellung eines Verteilmechanismus
 + Zur fachlichen Serialisierung
 
+[Singleton Quellcode](https://github.com/JensBekersch/TypescriptDesignPatterns/tree/master/src/CreationalPatterns/Singleton)
 
 ## Behavioral Patterns (Verhaltensmuster)
 
