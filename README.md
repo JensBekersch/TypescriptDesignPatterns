@@ -13,6 +13,17 @@ von Objekten, deren konkrete Typen Kindklassen einer Erzeugerklasse sind.
 
 [Factory Method Quellcode](https://github.com/JensBekersch/TypescriptDesignPatterns/tree/master/src/CreationalPatterns/Factory)
 
+###Singleton (Einzelstück)
+
+*Kurzbeschreibung*: Stellt sicher, dass von einer Klasse nur eine Instanz existiert.
+
+*Anwendungsfälle:*:
++ Klassen, deren Instanziierung großen Aufwand kostet
++ Zugriff auf zentrale Ressourcen (z.B. State)
++ Bereitstellung eines Verteilmechanismus
++ Zur fachlichen Serialisierung
+
+
 ## Behavioral Patterns (Verhaltensmuster)
 
 ### Command [Simple] (Befehl, Kommando)
@@ -29,4 +40,4 @@ im Bezug auf Ausführung und Zeitpunkt kontrolliert werden.
 
 ## Inversion of Control and Dependency Injection 
 
-[Simpler IOC/DI Container](https://github.com/JensBekersch/TypescriptDesignPatterns/tree/master/src/DependencyInjection)
+[Simpler IOC/DI Container mit Decorator](https://github.com/JensBekersch/TypescriptDesignPatterns/tree/master/src/DependencyInjection)

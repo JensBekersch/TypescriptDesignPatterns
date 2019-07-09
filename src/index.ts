@@ -3,7 +3,8 @@ import {BlackTeaFactory} from "./CreationalPatterns/Factory/BlackTeaFactory";
 import {WhiteTeaFactory} from "./CreationalPatterns/Factory/WhiteTeaFactory";
 import {Autowire} from "./DependencyInjection/Decorator/Autowire";
 import {Container} from "./DependencyInjection/Container/Container";
-
+import {Counter} from "./CreationalPatterns/Singleton/Counter";
+import {TestSingleton} from "./CreationalPatterns/Singleton/TestSingleton";
 
 // Factory
 console.log("Factory Method output: ");
@@ -17,6 +18,13 @@ for (let tea of blackTea.getProductList()) {
 for (let tea of whiteTea.getProductList()) {
     console.log(tea);
 }
+
+// Singleton
+let counter = Counter.instance;
+counter.count++;
+console.log("Initialisere mit Wert 1: " + counter.count);
+new TestSingleton();
+console.log("TestSinglton Klasse erhöht Counter um 1: " + counter.count);
 // Command Pattern
 console.log("Command Pattern output: ");
 let cmd = new ConcreteCommand();
@@ -61,9 +69,6 @@ class TestC implements IDummyC {
         console.log("TestC was successfully instantiated!");
     }
 }
-
-
-
 
 let container = Container.instance;
 let c = container.resolve<IDummyC>("IDummyC");
