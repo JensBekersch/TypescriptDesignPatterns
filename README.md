@@ -44,3 +44,5 @@ im Bezug auf Ausführung und Zeitpunkt kontrolliert werden.
 [Simpler IOC/DI Container mit Decorator](https://github.com/JensBekersch/TypescriptDesignPatterns/tree/master/src/DependencyInjection)
 
 ## Loose Coupling
+
+[Loose Coupling Quellcode](https://github.com/JensBekersch/TypescriptDesignPatterns/tree/master/src/LooseCoupling)
