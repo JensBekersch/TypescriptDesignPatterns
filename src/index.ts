@@ -10,6 +10,7 @@ import {TestLA} from "./LooseCoupling/impl/TestLA";
 import {CoffeemachineDeluxe} from "./StructuralPatterns/Decorator/Decorator/CoffeemachineDeluxe";
 import {CoffeemachineFlavorDecorator} from "./StructuralPatterns/Decorator/Decorator/CoffeemachineFlavorDecorator";
 import {CoffeemachineMelangeDecorator} from "./StructuralPatterns/Decorator/Decorator/CoffeemachineMelangeDecorator";
+import {DecoratedClass} from "./StructuralPatterns/Decorator/AnnotatedDecorators/DecoratedClass";
 
 // Factory
 console.log("Factory Method output: ");
@@ -94,6 +95,12 @@ machineWithDeluxeFeatures.turnOn();
 machineWithDeluxeFeatures.brewMelange();
 machineWithDeluxeFeatures.brewCoffeeWithFlavor();
 machineWithDeluxeFeatures.turnOff();
+
+// Method decorator
+let decoratedClass = new DecoratedClass();
+decoratedClass.bar();
+decoratedClass.foo();
+decoratedClass.baz();
 
 
 

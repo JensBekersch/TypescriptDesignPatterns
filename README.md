@@ -52,6 +52,16 @@ im Bezug auf Ausführung und Zeitpunkt kontrolliert werden.
 
 [Decorator Quellcode](https://github.com/JensBekersch/TypescriptDesignPatterns/tree/master/src/StructuralPatterns/Decorator/Decorator)
 
+Experimental Decorators
+
+...benötigen eine Aktivierung in der tsconfig.json Datei:
+
+    (...)
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    (...)
+
+
 ## Inversion of Control and Dependency Injection 
 
 [Simpler IOC/DI Container mit Decorator](https://github.com/JensBekersch/TypescriptDesignPatterns/tree/master/src/DependencyInjection)
