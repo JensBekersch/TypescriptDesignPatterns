@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Typescript Design Patterns",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "reflect-metadata": "^0.1.13"
+  },
   "devDependencies": {
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.2",

@@ -1,8 +1,8 @@
 import {ConcreteCommand} from "./BehavioralPatterns/Command[Simple]/ConcreteCommand";
 import {BlackTeaFactory} from "./CreationalPatterns/Factory/BlackTeaFactory";
 import {WhiteTeaFactory} from "./CreationalPatterns/Factory/WhiteTeaFactory";
-import {Autowire} from "./DependencyInjection/Decorator/Autowire";
-import {Container} from "./DependencyInjection/Container/Container";
+import {Autowire} from "./DependencyInjection/InversionOfControl/Decorator/Autowire";
+import {Container} from "./DependencyInjection/InversionOfControl/Container/Container";
 import {Counter} from "./CreationalPatterns/Singleton/Counter";
 import {TestSingleton} from "./CreationalPatterns/Singleton/TestSingleton";
 import {TestLB} from "./LooseCoupling/impl/TestLB";
@@ -11,6 +11,8 @@ import {CoffeemachineDeluxe} from "./StructuralPatterns/Decorator/Decorator/Coff
 import {CoffeemachineFlavorDecorator} from "./StructuralPatterns/Decorator/Decorator/CoffeemachineFlavorDecorator";
 import {CoffeemachineMelangeDecorator} from "./StructuralPatterns/Decorator/Decorator/CoffeemachineMelangeDecorator";
 import {DecoratedClass} from "./StructuralPatterns/Decorator/AnnotatedDecorators/DecoratedClass";
+import "reflect-metadata";
+import {DITest} from "./Test/DITest";
 
 // Factory
 console.log("Factory Method output: ");
@@ -101,6 +103,59 @@ let decoratedClass = new DecoratedClass();
 decoratedClass.bar();
 decoratedClass.foo();
 decoratedClass.baz();
+
+
+// function Inject(ClassInjects: object, ClassInjected: any[]) {
+//
+//     //console.log(ClassInjects); //get names from constructor
+//     //console.log(ClassInjected[0]);
+//
+//     //let inst = new ClassInjected[0]();
+//     //new ClassInjected[0]();
+//
+//     console.log(ClassInjects);
+//
+//     return function<T extends {new (...args: any[]): {}}>(constructor: T) {
+//         return class extends constructor {
+//              _diTestA = new ClassInjected[0]();
+//
+//         }
+//     }
+// }
+//
+// function Autowire(target : any, key : string) {
+//     var t = Reflect.getMetadata("design:type", target, key);
+//     console.log(`${key} type: ${t.name}`);
+// }
+//
+// class DITestA {
+//
+//     constructor() {
+//
+//     }
+//
+//     getMessage(): string {
+//         return "Message from A";
+//     }
+// }
+//
+// @Inject(DITest, [DITestA])
+// class DITest {
+//
+//     @Autowire
+//     private _diTestA?: DITestA;
+//
+//     constructor(
+//         _diTestA?: DITestA
+//     ) {}
+//
+//     printMessage(): void {
+//         console.log(this._diTestA.getMessage());
+//     }
+// }
+
+let diTest = new DITest();
+diTest.printMessage();
 
 
 
